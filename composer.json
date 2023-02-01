@@ -19,6 +19,6 @@
         }
     ],
     "require": {
-        "r2soffner/r2s-string-helper": "^0.0.2"
+        "r2soffner/r2s-string-helper": "~0.0.3"
     }
 }
