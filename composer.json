@@ -1,0 +1,23 @@
+{
+    "name": "r2soffner/r2s-simple-router",
+    "description": "A simple router used to make development easier and cooler",
+    "type": "library",
+    "license": "proprietary",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "R2SSimpleRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erik",
+            "email": "erikdavinci@gmail.com"
+        }
+    ],
+    "require": {
+        "r2soffner/r2s-string-helper": "dev-master"
+    }
+}
