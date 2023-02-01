@@ -6,6 +6,7 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "R2SSimpleRouter\\": "src/"
@@ -18,6 +19,6 @@
         }
     ],
     "require": {
-        "r2soffner/r2s-string-helper": "dev-master"
+        "r2soffner/r2s-string-helper": "^0.0.2"
     }
 }
