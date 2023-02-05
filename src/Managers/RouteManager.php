@@ -1,6 +1,6 @@
 <?php
 
-namespace R2SSimpleRouter\Handlers;
+namespace R2SSimpleRouter\Managers;
 
 use R2SSimpleRouter\Enums\ResponseStatusCode;
 use R2SSimpleRouter\Response;
