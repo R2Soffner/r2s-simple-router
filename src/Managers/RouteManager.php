@@ -39,7 +39,14 @@ class RouteManager
                     Response::error(responseStatusCode: ResponseStatusCode::HTTP_METHOD_NOT_ALLOWED);
                 }
 
-                $route->instantiateClass()->{$route->getMethodName()}(...$params);
+                $formattedParams = [];
+                foreach ($params as $key => $value) {
+                    $new_key = lcfirst(str_replace("_", "", ucwords($key, "_")));
+                    $formattedParams[$new_key] = $value;
+                }
+                extract($formattedParams);
+
+                $route->instantiateClass()->{$route->getMethodName()}(...$formattedParams);
 
                 Response::success();
             }
