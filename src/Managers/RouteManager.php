@@ -25,7 +25,7 @@ class RouteManager
         foreach ($this->routes as $route) {
             $regex = Stringer::fromString($route->getPath())
                 ->replace('/', '\/')
-                ->replaceWithRegex('/:[A-Za-z]+/', '([0-9]+)')
+                ->replaceWithRegex('/:[A-Za-z_]+/', '([0-9A-Za-z]+)')
                 ->getString();
 
             if (preg_match('/^'.$regex.'$/', $this->getParsedUrl())) {
