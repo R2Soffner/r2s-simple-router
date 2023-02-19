@@ -32,4 +32,11 @@ class Request
     {
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
+
+    public static function bearerToken()
+    {
+        return isset($_SERVER['HTTP_AUTHORIZATION'])
+            ? str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION'])
+            : '';
+    }
 }
