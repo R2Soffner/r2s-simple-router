@@ -37,6 +37,11 @@ class Request
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
+    public static function get(string $parameter, mixed $default = null)
+    {
+        return @self::all()[$parameter] ?? $default;
+    }
+
     public static function bearerToken()
     {
         return isset($_SERVER['HTTP_AUTHORIZATION'])
