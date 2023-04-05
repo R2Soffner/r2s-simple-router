@@ -25,7 +25,11 @@ class Request
 
     public static function all(): array
     {
-        return array_merge($_GET, $_POST);
+        return array_merge(
+            $_GET,
+            $_POST,
+            json_decode(file_get_contents('php://input'), true) ?? []
+        );
     }
 
     public static function route(): bool|int|array|string|null
