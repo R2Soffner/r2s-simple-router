@@ -48,7 +48,7 @@ class RouteManager
 
                 $route->instantiateClass()->{$route->getMethodName()}(...$formattedParams);
 
-                Response::success();
+                return;
             }
         }
 
